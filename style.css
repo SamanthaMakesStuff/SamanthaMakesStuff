@@ -237,10 +237,13 @@ img, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .lockup-line1 {
+  display: block;
+  max-width: 60rem;
+  margin-inline: auto;
   font-family: var(--font-lockup);
-  font-size: var(--text-display);
-  line-height: 0.95;
-  letter-spacing: 0.01em;
+  font-size: var(--text-lockup);
+  line-height: 1.05;
+  letter-spacing: 0;
   color: var(--color-primary);
   overflow-wrap: anywhere;
   min-width: 0;
@@ -312,6 +315,16 @@ img, a { -webkit-tap-highlight-color: transparent; }
 .hero-confetti .motif:nth-child(16) { bottom: 24%; right: 20%; }
 .hero-confetti .motif:nth-child(17) { top: 2%; left: 40%; opacity: 0.7; }
 .hero-confetti .motif:nth-child(18) { top: 1%; right: 38%; opacity: 0.7; }
+.hero-confetti .motif:nth-child(19) { top: 18%; left: 6%; }
+.hero-confetti .motif:nth-child(20) { top: 20%; right: 8%; transform: rotate(-8deg); }
+.hero-confetti .motif:nth-child(21) { bottom: 18%; left: 8%; }
+.hero-confetti .motif:nth-child(22) { bottom: 16%; right: 9%; }
+.hero-confetti .motif:nth-child(23) { top: 8%; left: 28%; }
+.hero-confetti .motif:nth-child(24) { bottom: 2%; right: 30%; }
+.hero-confetti .motif:nth-child(25) { top: 32%; left: 2%; }
+.hero-confetti .motif:nth-child(26) { top: 34%; right: 1%; }
+.hero-confetti .motif:nth-child(27) { bottom: 34%; left: 3%; }
+.hero-confetti .motif:nth-child(28) { bottom: 36%; right: 2%; transform: rotate(9deg); }
 
 /* ================= About — quiet ================= */
 .about {
@@ -596,7 +609,7 @@ img, a { -webkit-tap-highlight-color: transparent; }
   .off-screen .section-inner { grid-template-columns: 1fr; }
   .off-screen-quote { grid-column: 1; }
 
-  .lockup-line1 { font-size: var(--text-display-s); }
+  .lockup-line1 { font-size: clamp(1.75rem, 11vw, 3rem); }
   /* Mobile keeps only motifs anchored at the very top/bottom edges or pushed
      past the horizontal edge — nothing in the vertical band the centred
      lockup/tagline/CTA text occupies, so nothing can land on the text. */
@@ -608,7 +621,11 @@ img, a { -webkit-tap-highlight-color: transparent; }
   .hero-confetti .motif:nth-child(9),
   .hero-confetti .motif:nth-child(10),
   .hero-confetti .motif:nth-child(17),
-  .hero-confetti .motif:nth-child(18) { display: block; }
+  .hero-confetti .motif:nth-child(18),
+  .hero-confetti .motif:nth-child(19),
+  .hero-confetti .motif:nth-child(20),
+  .hero-confetti .motif:nth-child(25),
+  .hero-confetti .motif:nth-child(26) { display: block; }
 
   .connect-confetti .motif:nth-child(5),
   .connect-confetti .motif:nth-child(6),

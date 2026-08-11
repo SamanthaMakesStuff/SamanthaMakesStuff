@@ -37,6 +37,7 @@
   --text-3xl:  3.0518rem;
   --text-display:   clamp(3.5rem, 9vw, 8rem);
   --text-display-s: clamp(2.25rem, 6vw, 4.5rem);
+  --text-lockup:    clamp(1.75rem, 6vw, 4.5rem); /* Bungee Outline runs much wider per glyph than Anton — smaller cap so "Samantha" stays on one line */
 
   /* ---------- Borders / shape (Memphis: thick borders, hard offset shadows) ---------- */
   --border-width:    3px;
