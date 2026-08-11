@@ -22,6 +22,7 @@
 
   /* ---------- Type ---------- */
   --font-display: "Anton", "Archivo Black", sans-serif;
+  --font-lockup:  "Bungee Outline", "Anton", sans-serif; /* the big "Samantha" wordmark only */
   --font-ribbon:  "Megrim", "Anton", sans-serif; /* "Makes" ribbon only — reverted per feedback */
   --font-script:  "Caveat", cursive;
   --font-body:    "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
