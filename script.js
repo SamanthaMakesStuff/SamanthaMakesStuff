@@ -26,15 +26,18 @@ const motifColors = [
 document.addEventListener("click", (event) => {
   if (event.target.closest("a, button")) return;
 
-  const particle = document.createElement("span");
-  const shape = shapeClasses[Math.floor(Math.random() * shapeClasses.length)];
-  particle.className = `motif ${shape} confetti-particle`;
-  particle.style.left = `${event.clientX}px`;
-  particle.style.top = `${event.clientY}px`;
-  particle.style.setProperty("--motif-color", motifColors[Math.floor(Math.random() * motifColors.length)]);
-  particle.style.width = "1.4rem";
-  particle.style.height = "1.4rem";
+  for (let i = 0; i < 3; i++) {
+    const particle = document.createElement("span");
+    const shape = shapeClasses[Math.floor(Math.random() * shapeClasses.length)];
+    particle.className = `motif ${shape} confetti-particle`;
+    particle.style.left = `${event.clientX + (Math.random() * 40 - 20)}px`;
+    particle.style.top = `${event.clientY + (Math.random() * 40 - 20)}px`;
+    particle.style.setProperty("--motif-color", motifColors[Math.floor(Math.random() * motifColors.length)]);
+    particle.style.width = "1.4rem";
+    particle.style.height = "1.4rem";
+    particle.style.animationDelay = `${i * 40}ms`;
 
-  document.body.appendChild(particle);
-  particle.addEventListener("animationend", () => particle.remove());
+    document.body.appendChild(particle);
+    particle.addEventListener("animationend", () => particle.remove());
+  }
 });

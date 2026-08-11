@@ -96,6 +96,19 @@ img, a { -webkit-tap-highlight-color: transparent; }
   opacity: 0.9;
 }
 
+/* ================= Motif divider — a repeated-pattern strip between sections (design.md §6) ================= */
+.motif-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding-block: var(--space-4);
+  background: var(--color-surface);
+  border-block: var(--border-width) solid var(--color-ink);
+}
+.motif-divider .motif { position: static; }
+
 /* ================= Header ================= */
 .site-header {
   position: sticky;
@@ -107,6 +120,12 @@ img, a { -webkit-tap-highlight-color: transparent; }
   padding: var(--space-3) clamp(1.25rem, 4vw, 3rem);
   background: var(--color-background);
   border-bottom: var(--border-width) solid var(--color-ink);
+}
+
+.header-motif {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 .wordmark {
@@ -281,24 +300,38 @@ img, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .hero-confetti .motif { z-index: var(--z-base); }
-.hero-confetti .motif:nth-child(1)  { top: 4%;  left: 4%; }
-.hero-confetti .motif:nth-child(2)  { top: 10%; left: 15%; transform: rotate(12deg); }
-.hero-confetti .motif:nth-child(3)  { top: 6%;  right: 6%; }
-.hero-confetti .motif:nth-child(4)  { top: 16%; right: 4%; transform: rotate(-15deg); }
-.hero-confetti .motif:nth-child(5)  { bottom: 8%; left: 2%; }
-.hero-confetti .motif:nth-child(6)  { bottom: -2%; left: 12%; }
-.hero-confetti .motif:nth-child(7)  { bottom: 10%; right: 8%; }
-.hero-confetti .motif:nth-child(8)  { bottom: -1%; right: 18%; transform: rotate(10deg); }
-.hero-confetti .motif:nth-child(9)  { top: 40%; left: -1%; }
-.hero-confetti .motif:nth-child(10) { top: 44%; right: -1%; }
+.hero-confetti .motif:nth-child(1)  { top: 3%;  left: 3%; }
+.hero-confetti .motif:nth-child(2)  { top: 9%;  left: 15%; transform: rotate(12deg); }
+.hero-confetti .motif:nth-child(3)  { top: 5%;  right: 5%; }
+.hero-confetti .motif:nth-child(4)  { top: 15%; right: 3%; transform: rotate(-15deg); }
+.hero-confetti .motif:nth-child(5)  { bottom: 7%; left: 1%; }
+.hero-confetti .motif:nth-child(6)  { bottom: -2%; left: 11%; }
+.hero-confetti .motif:nth-child(7)  { bottom: 9%; right: 7%; }
+.hero-confetti .motif:nth-child(8)  { bottom: -1%; right: 17%; transform: rotate(10deg); }
+.hero-confetti .motif:nth-child(9)  { top: 38%; left: -2%; }
+.hero-confetti .motif:nth-child(10) { top: 42%; right: -2%; }
+.hero-confetti .motif:nth-child(11) { top: 26%; left: 22%; }
+.hero-confetti .motif:nth-child(12) { top: 24%; right: 24%; transform: rotate(-10deg); }
+.hero-confetti .motif:nth-child(13) { top: 60%; left: 6%; }
+.hero-confetti .motif:nth-child(14) { top: 62%; right: 5%; }
+.hero-confetti .motif:nth-child(15) { bottom: 22%; left: 20%; transform: rotate(14deg); }
+.hero-confetti .motif:nth-child(16) { bottom: 24%; right: 20%; }
+.hero-confetti .motif:nth-child(17) { top: 2%; left: 40%; opacity: 0.7; }
+.hero-confetti .motif:nth-child(18) { top: 1%; right: 38%; opacity: 0.7; }
 
 /* ================= About — quiet ================= */
 .about {
+  position: relative;
+  overflow: clip;
   padding-block: var(--space-24);
 }
 .about .section-inner {
   max-width: 42rem;
 }
+.about-confetti .motif { z-index: var(--z-base); opacity: 0.8; }
+.about-confetti .motif:nth-child(1) { top: 10%; right: 8%; }
+.about-confetti .motif:nth-child(2) { bottom: 14%; right: 14%; transform: rotate(10deg); }
+.about-confetti .motif:nth-child(3) { top: 46%; left: 4%; }
 .about-eyebrow {
   font-family: var(--font-script);
   font-size: var(--text-xl);
@@ -343,6 +376,10 @@ img, a { -webkit-tap-highlight-color: transparent; }
   color: var(--color-ink-2);
   margin-block-start: var(--space-2);
 }
+.projects-confetti .motif:nth-child(1) { top: 6%;  left: 3%; }
+.projects-confetti .motif:nth-child(2) { top: 8%;  right: 4%; }
+.projects-confetti .motif:nth-child(3) { bottom: 6%; left: 6%; transform: rotate(-8deg); }
+.projects-confetti .motif:nth-child(4) { bottom: 4%; right: 8%; }
 
 .card-grid {
   display: grid;
@@ -371,8 +408,13 @@ img, a { -webkit-tap-highlight-color: transparent; }
 .card--three { grid-column: span 2; }
 .card--four  { grid-column: span 2; transform: rotate(var(--rotate-strong)); }
 
-.card-motif { position: absolute; top: var(--space-4); right: var(--space-4); }
-.card--live .card-motif { top: var(--space-6); left: var(--space-6); right: auto; }
+.card-motif { position: absolute; }
+.card-motif--a { top: -0.6rem; right: -0.6rem; }
+.card-motif--b { bottom: -0.6rem; left: -0.6rem; }
+/* card--live has a badge top-left and a link bottom-left in flow, so keep both
+   its motifs clear on the right side rather than the default corners. */
+.card--live .card-motif--a { top: -0.6rem; right: -0.6rem; }
+.card--live .card-motif--b { bottom: -0.6rem; right: 2.5rem; left: auto; }
 
 .badge {
   align-self: flex-start;
@@ -412,8 +454,15 @@ img, a { -webkit-tap-highlight-color: transparent; }
 
 /* ================= Off-screen — quiet information ================= */
 .off-screen {
+  position: relative;
+  overflow: clip;
+  background: var(--color-surface);
   padding-block: var(--space-24);
 }
+.off-screen-confetti .motif:nth-child(1) { top: 8%;  left: 4%; }
+.off-screen-confetti .motif:nth-child(2) { top: 10%; right: 6%; }
+.off-screen-confetti .motif:nth-child(3) { bottom: 10%; left: 10%; transform: rotate(6deg); }
+.off-screen-confetti .motif:nth-child(4) { bottom: 6%; right: 4%; }
 .off-screen .section-inner {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -484,6 +533,10 @@ img, a { -webkit-tap-highlight-color: transparent; }
 .connect-confetti .motif:nth-child(2) { bottom: 10%; left: 10%; transform: rotate(-10deg); }
 .connect-confetti .motif:nth-child(3) { top: 10%; right: 8%; }
 .connect-confetti .motif:nth-child(4) { bottom: 6%; right: 12%; }
+.connect-confetti .motif:nth-child(5) { top: 40%; left: 3%; }
+.connect-confetti .motif:nth-child(6) { top: 42%; right: 4%; }
+.connect-confetti .motif:nth-child(7) { top: 20%; left: 24%; transform: rotate(8deg); }
+.connect-confetti .motif:nth-child(8) { top: 22%; right: 22%; }
 
 /* ================= Footer — supporting nav, quiet ================= */
 .site-footer {
@@ -550,19 +603,39 @@ img, a { -webkit-tap-highlight-color: transparent; }
   .off-screen-quote { grid-column: 1; }
 
   .lockup-line1 { font-size: var(--text-display-s); }
+  /* Mobile keeps only motifs anchored at the very top/bottom edges or pushed
+     past the horizontal edge — nothing in the vertical band the centred
+     lockup/tagline/CTA text occupies, so nothing can land on the text. */
   .hero-confetti .motif { display: none; }
   .hero-confetti .motif:nth-child(1),
   .hero-confetti .motif:nth-child(3),
   .hero-confetti .motif:nth-child(5),
-  .hero-confetti .motif:nth-child(7) { display: block; }
+  .hero-confetti .motif:nth-child(7),
+  .hero-confetti .motif:nth-child(9),
+  .hero-confetti .motif:nth-child(10),
+  .hero-confetti .motif:nth-child(17),
+  .hero-confetti .motif:nth-child(18) { display: block; }
 
-  .connect-confetti .motif:nth-child(3),
-  .connect-confetti .motif:nth-child(4) { display: none; }
+  .connect-confetti .motif:nth-child(5),
+  .connect-confetti .motif:nth-child(6),
+  .connect-confetti .motif:nth-child(7),
+  .connect-confetti .motif:nth-child(8) { display: none; }
+
+  .about-confetti .motif:nth-child(3),
+  .projects-confetti .motif:nth-child(3),
+  .projects-confetti .motif:nth-child(4),
+  .off-screen-confetti .motif:nth-child(3),
+  .off-screen-confetti .motif:nth-child(4) { display: none; }
+
+  .motif-divider { gap: var(--space-3); padding-block: var(--space-3); }
+  .motif-divider .motif:nth-child(6),
+  .motif-divider .motif:nth-child(7),
+  .motif-divider .motif:nth-child(8) { display: none; }
 }
 
 @media (min-width: 40.01rem) and (max-width: 60rem) {
   .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .card--live, .card--two, .card--three, .card--four { grid-column: span 2; }
+  .card--live, .card--two, .card--three, .card--four { grid-column: span 2; transform: none; }
 }
 
 /* ================= Reduced motion ================= */

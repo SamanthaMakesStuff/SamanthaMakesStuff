@@ -3,25 +3,25 @@
  */
 :root {
   /* ---------- Color — locked structure: 1 background, 1 ink, 3 saturated accents, 1 secondary neutral ---------- */
-  --color-background: oklch(97% 0.020 80);   /* cream paper */
-  --color-surface:    oklch(94% 0.025 80);   /* card surface, one step down */
+  --color-background: #FFFDF7;                 /* near-white, barely-there warm cream — exact per brief */
+  --color-surface:    oklch(97% 0.014 85);     /* one subtle step down, for section bands */
   --color-ink:         oklch(15% 0.020 55);   /* near-black, warm-tinted */
   --color-ink-2:        oklch(34% 0.020 55);   /* secondary text */
   --color-rule:         oklch(85% 0.020 80);   /* quiet divider */
 
-  --color-primary:      oklch(62% 0.220 5);     /* hot pink — the loudest accent */
+  --color-primary:      oklch(60% 0.235 6);     /* hot pink — the loudest accent, big/bold not pastel */
   --color-primary-ink:  var(--color-ink);        /* safe default for small/body-sized text on pink fill */
   --color-primary-ink-large: var(--color-background); /* only for large/display-sized text on pink fill (>=18.66px bold) */
-  --color-secondary:    oklch(80% 0.115 185);   /* turquoise */
+  --color-secondary:    oklch(72% 0.160 185);   /* turquoise — boosted, not pale mint */
   --color-secondary-ink: var(--color-ink);
-  --color-accent:       oklch(80% 0.150 85);    /* mustard/gold — flat, no glitter */
+  --color-accent:       oklch(74% 0.180 85);    /* mustard/gold — flat, no glitter, boosted */
   --color-accent-ink:   var(--color-ink);
-  --color-neutral:      oklch(90% 0.030 350);   /* blush — optional secondary neutral */
+  --color-neutral:      oklch(91% 0.060 6);     /* light pink tint for the featured card — saturated enough to read as pink, never washed-out pastel */
 
-  --color-focus:        oklch(58% 0.230 5);
+  --color-focus:        oklch(55% 0.240 6);
 
   /* ---------- Type ---------- */
-  --font-display: "Megrim", ui-sans-serif, sans-serif;
+  --font-display: "Anton", "Archivo Black", sans-serif;
   --font-script:  "Caveat", cursive;
   --font-body:    "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
