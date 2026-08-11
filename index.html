@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Samantha Makes Stuff ✨</title>
 <meta name="description" content="Samantha Makes Stuff — bright, bold experiments in vibe coding and AI.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪩</text></svg>">
@@ -13,122 +13,122 @@
 </head>
 <body>
 
-<div class="sparkle-field" aria-hidden="true"></div>
-
-<header class="hero">
-  <nav class="nav">
-    <span class="nav-logo">🪩 Samantha Makes Stuff</span>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
+<header class="nav-slab" id="navSlab">
+  <a href="#top" class="slab-mark">Samantha Makes Stuff</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+    <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    <span class="visually-hidden">Menu</span>
+  </button>
+  <nav class="slab-nav" id="navLinks" aria-label="Primary">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#stuff">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
+  <a href="#contact" class="cta-fill--slab">Say hi</a>
+</header>
+
+<header class="hero" id="top">
+  <div class="hero-confetti" aria-hidden="true">
+    <span class="shape shape-circle"></span>
+    <span class="shape shape-zigzag"></span>
+    <span class="shape shape-triangle"></span>
+    <span class="shape shape-circle shape-circle--sm"></span>
+    <span class="shape shape-triangle"></span>
+  </div>
 
   <div class="hero-content">
     <div class="disco-ball" aria-hidden="true">
-      <div class="disco-glow"></div>
       <div class="disco-string"></div>
       <div class="disco-sphere">
-        <span class="facet-highlight fh1"></span>
-        <span class="facet-highlight fh2"></span>
-        <span class="facet-highlight fh3"></span>
+        <span class="glint"></span>
+        <span class="glint"></span>
+        <span class="glint"></span>
+        <span class="glint"></span>
       </div>
       <div class="light-beam beam1"></div>
       <div class="light-beam beam2"></div>
       <div class="light-beam beam3"></div>
       <div class="light-beam beam4"></div>
-      <span class="glint g1"></span>
-      <span class="glint g2"></span>
-      <span class="glint g3"></span>
-      <span class="glint g4"></span>
-      <span class="glint g5"></span>
-      <span class="glint g6"></span>
-      <span class="glint g7"></span>
     </div>
     <h1 class="hero-title">Samantha<br>Makes Stuff</h1>
-    <p class="hero-tagline">Vibe coding, AI experiments, and glitter-coated chaos ✨</p>
-    <a href="#projects" class="cta-button">See the stuff →</a>
+    <p class="hero-tagline">Vibe coding, AI experiments, and glitter-coated chaos.</p>
+    <a href="#stuff" class="cta-outline">See the stuff →</a>
   </div>
 </header>
 
 <main>
-  <section id="about" class="section about">
-    <div class="section-inner">
-      <h2 class="section-title">Hi, I'm Samantha <span class="wave">👋</span></h2>
-      <div class="bio-card">
-        <p>
-          I'm Samantha — professionally curious, allergic to boring. I got hooked on "vibe coding"
-          because it turns "I wonder if..." into a working thing before I've finished my coffee.
-          No CS degree required, just good questions and the nerve to hit run.
-        </p>
-        <p>
-          This site is where those experiments live: half curiosity, half chaos, entirely mine.
-          When I'm not making AI do weird and wonderful things, I'm deep in a book, deep in a game,
-          getting bossed around by my cats, or working on my tan at the beach.
-        </p>
-      </div>
-    </div>
-  </section>
+  <section id="stuff" class="bento-wrap" aria-label="About and projects">
+    <div class="bento">
 
-  <section id="projects" class="section projects">
-    <div class="section-inner">
-      <h2 class="section-title">The Stuff <span class="sparkle-icon">🌟</span></h2>
-      <p class="section-subtitle">A glittering collection of experiments, in progress.</p>
+      <article id="about" class="cell span-2x2 tile tile--about">
+        <h2 class="tile-heading">Hi, I'm Samantha</h2>
+        <p>I’m Samantha — professionally curious, allergic to boring. I got hooked on “vibe coding” because it turns “I wonder if…” into a working thing before I’ve finished my coffee.</p>
+      </article>
 
-      <div class="project-grid">
+      <article class="cell span-2x2 tile tile--project tile--live">
+        <span class="tile-shape shape-circle" aria-hidden="true"></span>
+        <span class="project-badge project-badge--live">Try it live</span>
+        <h2 class="tile-heading">Silly Tavern Companion</h2>
+        <p>Feed it fanfiction and it extracts grounded character cards and lorebooks for SillyTavern — no hallucinated lore, every detail cited straight from the text.</p>
+        <a href="https://silly-tavern-companion.vercel.app/" class="tile-link" target="_blank" rel="noopener">Open the tool →</a>
+      </article>
 
-        <a href="https://silly-tavern-companion.vercel.app/" class="project-card" target="_blank" rel="noopener">
-          <div class="project-card-shine"></div>
-          <span class="project-emoji">🪩</span>
-          <h3>Silly Tavern Companion</h3>
-          <p>Feed it fanfiction and it extracts grounded character cards and lorebooks for SillyTavern — no hallucinated lore, every detail cited straight from the text.</p>
-          <span class="project-badge">Try it live</span>
-        </a>
+      <article class="cell span-1x1 tile tile--into">
+        <h2 class="tile-heading">Off-screen</h2>
+        <p>When I’m not making AI do weird and wonderful things, I’m deep in a book, deep in a game, getting bossed around by my cats, or working on my tan at the beach.</p>
+      </article>
 
-        <a href="#" class="project-card" data-status="coming-soon">
-          <div class="project-card-shine"></div>
-          <span class="project-emoji">💖</span>
-          <h3>Project Two</h3>
-          <p>A short description of this experiment goes here.</p>
-          <span class="project-badge">Coming soon</span>
-        </a>
+      <article class="cell span-1x1 tile tile--project" data-status="coming-soon">
+        <span class="tile-shape shape-triangle" aria-hidden="true"></span>
+        <span class="project-badge">Coming soon</span>
+        <h2 class="tile-heading">Project Two</h2>
+        <p>A short description of this experiment goes here.</p>
+      </article>
 
-        <a href="#" class="project-card" data-status="coming-soon">
-          <div class="project-card-shine"></div>
-          <span class="project-emoji">✨</span>
-          <h3>Project Three</h3>
-          <p>A short description of this experiment goes here.</p>
-          <span class="project-badge">Coming soon</span>
-        </a>
+      <article class="cell span-1x1 tile tile--project" data-status="coming-soon">
+        <span class="tile-shape shape-zigzag" aria-hidden="true"></span>
+        <span class="project-badge">Coming soon</span>
+        <h2 class="tile-heading">Project Three</h2>
+        <p>A short description of this experiment goes here.</p>
+      </article>
 
-        <a href="#" class="project-card" data-status="coming-soon">
-          <div class="project-card-shine"></div>
-          <span class="project-emoji">🎤</span>
-          <h3>Project Four</h3>
-          <p>A short description of this experiment goes here.</p>
-          <span class="project-badge">Coming soon</span>
-        </a>
+      <article class="cell span-1x1 tile tile--project" data-status="coming-soon">
+        <span class="tile-shape shape-circle shape-circle--sm" aria-hidden="true"></span>
+        <span class="project-badge">Coming soon</span>
+        <h2 class="tile-heading">Project Four</h2>
+        <p>A short description of this experiment goes here.</p>
+      </article>
 
-      </div>
-    </div>
-  </section>
+      <article class="cell span-1x1 tile tile--quote">
+        <p class="quote">“No CS degree required, just good questions and the nerve to hit run.”</p>
+      </article>
 
-  <section id="contact" class="section contact">
-    <div class="section-inner">
-      <h2 class="section-title">Let's Connect <span class="sparkle-icon">💌</span></h2>
-      <p class="section-subtitle">Find Samantha around the internet.</p>
-      <div class="social-links">
-        <a href="#" class="social-pill">GitHub</a>
-        <a href="#" class="social-pill">Twitter / X</a>
-        <a href="#" class="social-pill">Email</a>
-      </div>
+      <article class="cell span-1x1 tile tile--stat">
+        <p class="stat-number">1<span class="stat-unit">shipped</span></p>
+        <p class="stat-sub">3 more brewing</p>
+      </article>
+
+      <article id="contact" class="cell span-2x1 tile tile--contact">
+        <h2 class="tile-heading">Let’s connect</h2>
+        <div class="social-links">
+          <a href="#" class="social-pill">GitHub</a>
+          <a href="#" class="social-pill">Twitter / X</a>
+          <a href="#" class="social-pill">Email</a>
+        </div>
+      </article>
+
     </div>
   </section>
 </main>
 
-<footer class="footer">
-  <p>Made with 🪩 and a little bit of chaos — Samantha Makes Stuff</p>
+<footer class="foot-marquee" aria-label="Footer">
+  <div class="foot-marquee__track" aria-hidden="true">
+    <span>SAMANTHA MAKES STUFF · MADE WITH GLITTER AND CHAOS · SAMANTHA MAKES STUFF · MADE WITH GLITTER AND CHAOS ·</span>
+    <span>SAMANTHA MAKES STUFF · MADE WITH GLITTER AND CHAOS · SAMANTHA MAKES STUFF · MADE WITH GLITTER AND CHAOS ·</span>
+  </div>
+  <p class="visually-hidden">Samantha Makes Stuff. Made with glitter and chaos.</p>
 </footer>
 
 <script src="script.js"></script>
