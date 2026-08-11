@@ -270,7 +270,7 @@ img, a { -webkit-tap-highlight-color: transparent; }
   display: block;
   background: var(--color-primary);
   color: var(--color-primary-ink-large);
-  font-family: var(--font-display);
+  font-family: var(--font-ribbon);
   font-size: var(--text-display-s);
   line-height: 1.05;
   padding: var(--space-2) var(--space-8);
