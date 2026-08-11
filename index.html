@@ -3,132 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Samantha Makes Stuff ✨</title>
+<title>Samantha Makes Stuff</title>
 <meta name="description" content="Samantha Makes Stuff — bright, bold experiments in vibe coding and AI.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪩</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23fff7ea%22/><polygon points=%2250,15 15,80 85,80%22 fill=%22%23ff3d8a%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Megrim&family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav-slab" id="navSlab">
-  <a href="#top" class="slab-mark">Samantha Makes Stuff</a>
-  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+<header class="site-header" id="siteHeader">
+  <a href="#top" class="wordmark">Samantha <span>Makes Stuff</span></a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
     <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
     <span class="visually-hidden">Menu</span>
   </button>
-  <nav class="slab-nav" id="navLinks" aria-label="Primary">
+  <nav class="site-nav" id="siteNav" aria-label="Primary">
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#stuff">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
     </ul>
   </nav>
-  <a href="#contact" class="cta-fill--slab">Say hi</a>
 </header>
 
 <header class="hero" id="top">
   <div class="hero-confetti" aria-hidden="true">
-    <span class="shape shape-circle"></span>
-    <span class="shape shape-zigzag"></span>
-    <span class="shape shape-triangle"></span>
-    <span class="shape shape-circle shape-circle--sm"></span>
-    <span class="shape shape-triangle"></span>
+    <span class="motif motif-triangle" style="--motif-color: var(--color-primary);"></span>
+    <span class="motif motif-dots" style="--motif-color: var(--color-ink); width: 3rem; height: 2rem;"></span>
+    <span class="motif motif-triangle" style="--motif-color: var(--color-accent); width: 2.2rem; height: 2rem;"></span>
+    <span class="motif motif-squiggle" style="--motif-color: var(--color-primary);"></span>
+    <span class="motif motif-squiggle" style="--motif-color: var(--color-accent);"></span>
+    <span class="motif motif-arc" style="--motif-color: var(--color-secondary); width: 4rem; height: 2rem;"></span>
+    <span class="motif motif-circle motif-circle--lg" style="--motif-color: var(--color-primary); opacity: 0.5;"></span>
+    <span class="motif motif-triangle" style="--motif-color: var(--color-accent); width: 1.6rem; height: 1.5rem;"></span>
+    <span class="motif motif-zigzag" style="--motif-color: var(--color-secondary);"></span>
+    <span class="motif motif-circle motif-circle--sm" style="--motif-color: var(--color-secondary);"></span>
   </div>
 
-  <div class="hero-content">
-    <div class="disco-ball" aria-hidden="true">
-      <div class="disco-string"></div>
-      <div class="disco-sphere">
-        <span class="glint"></span>
-        <span class="glint"></span>
-        <span class="glint"></span>
-        <span class="glint"></span>
+  <div class="hero-inner">
+    <div class="lockup">
+      <h1 class="lockup-line1">Samantha</h1>
+      <div class="lockup-ribbon-wrap">
+        <span class="lockup-ribbon">Makes</span>
       </div>
-      <div class="light-beam beam1"></div>
-      <div class="light-beam beam2"></div>
-      <div class="light-beam beam3"></div>
-      <div class="light-beam beam4"></div>
+      <br>
+      <span class="lockup-line3">Stuff</span>
+
+      <p class="hero-tagline">Vibe coding, AI experiments, and Memphis-flavoured chaos. One place for the stuff I build.</p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn--primary">See the stuff →</a>
+      </div>
     </div>
-    <h1 class="hero-title">Samantha<br>Makes Stuff</h1>
-    <p class="hero-tagline">Vibe coding, AI experiments, and glitter-coated chaos.</p>
-    <a href="#stuff" class="cta-outline">See the stuff →</a>
   </div>
 </header>
 
 <main>
-  <section id="stuff" class="bento-wrap" aria-label="About and projects">
-    <div class="bento">
+  <section id="about" class="about">
+    <div class="section-inner">
+      <p class="about-eyebrow">Hi, I’m</p>
+      <h2 class="about-heading">Samantha</h2>
+      <p>Professionally curious, allergic to boring. I got hooked on “vibe coding” because it turns “I wonder if…” into a working thing before I’ve finished my coffee. No CS degree required, just good questions and the nerve to hit run.</p>
+      <p>This is where those experiments live — half curiosity, half chaos, entirely mine.</p>
+    </div>
+  </section>
 
-      <article id="about" class="cell span-2x2 tile tile--about">
-        <h2 class="tile-heading">Hi, I'm Samantha</h2>
-        <p>I’m Samantha — professionally curious, allergic to boring. I got hooked on “vibe coding” because it turns “I wonder if…” into a working thing before I’ve finished my coffee.</p>
-      </article>
+  <section id="projects" class="projects">
+    <div class="section-inner">
+      <div class="projects-head">
+        <h2 class="projects-heading">The stuff</h2>
+        <p class="projects-sub">A glittering collection of experiments, in progress.</p>
+      </div>
 
-      <article class="cell span-2x2 tile tile--project tile--live">
-        <span class="tile-shape shape-circle" aria-hidden="true"></span>
-        <span class="project-badge project-badge--live">Try it live</span>
-        <h2 class="tile-heading">Silly Tavern Companion</h2>
-        <p>Feed it fanfiction and it extracts grounded character cards and lorebooks for SillyTavern — no hallucinated lore, every detail cited straight from the text.</p>
-        <a href="https://silly-tavern-companion.vercel.app/" class="tile-link" target="_blank" rel="noopener">Open the tool →</a>
-      </article>
+      <div class="card-grid">
+        <article class="card card--live">
+          <span class="card-motif motif-circle motif-circle--sm" style="--motif-color: var(--color-accent); position: absolute;"></span>
+          <span class="badge badge--live">Try it live</span>
+          <h3 class="card-heading">Silly Tavern Companion</h3>
+          <p>Feed it fanfiction and it extracts grounded character cards and lorebooks for SillyTavern — no hallucinated lore, every detail cited straight from the text.</p>
+          <a href="https://silly-tavern-companion.vercel.app/" class="card-link" target="_blank" rel="noopener">Open the tool →</a>
+        </article>
 
-      <article class="cell span-1x1 tile tile--into">
-        <h2 class="tile-heading">Off-screen</h2>
-        <p>When I’m not making AI do weird and wonderful things, I’m deep in a book, deep in a game, getting bossed around by my cats, or working on my tan at the beach.</p>
-      </article>
+        <article class="card card--two" data-status="coming-soon">
+          <span class="card-motif motif-triangle" style="--motif-color: var(--color-secondary); position: absolute;"></span>
+          <span class="badge">Coming soon</span>
+          <h3 class="card-heading">Project Two</h3>
+          <p>A short description of this experiment goes here.</p>
+        </article>
 
-      <article class="cell span-1x1 tile tile--project" data-status="coming-soon">
-        <span class="tile-shape shape-triangle" aria-hidden="true"></span>
-        <span class="project-badge">Coming soon</span>
-        <h2 class="tile-heading">Project Two</h2>
-        <p>A short description of this experiment goes here.</p>
-      </article>
+        <article class="card card--three" data-status="coming-soon">
+          <span class="card-motif motif-zigzag" style="--motif-color: var(--color-primary); position: absolute;"></span>
+          <span class="badge">Coming soon</span>
+          <h3 class="card-heading">Project Three</h3>
+          <p>A short description of this experiment goes here.</p>
+        </article>
 
-      <article class="cell span-1x1 tile tile--project" data-status="coming-soon">
-        <span class="tile-shape shape-zigzag" aria-hidden="true"></span>
-        <span class="project-badge">Coming soon</span>
-        <h2 class="tile-heading">Project Three</h2>
-        <p>A short description of this experiment goes here.</p>
-      </article>
+        <article class="card card--four" data-status="coming-soon">
+          <span class="card-motif motif-squiggle" style="--motif-color: var(--color-secondary); position: absolute;"></span>
+          <span class="badge">Coming soon</span>
+          <h3 class="card-heading">Project Four</h3>
+          <p>A short description of this experiment goes here.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <article class="cell span-1x1 tile tile--project" data-status="coming-soon">
-        <span class="tile-shape shape-circle shape-circle--sm" aria-hidden="true"></span>
-        <span class="project-badge">Coming soon</span>
-        <h2 class="tile-heading">Project Four</h2>
-        <p>A short description of this experiment goes here.</p>
-      </article>
-
-      <article class="cell span-1x1 tile tile--quote">
-        <p class="quote">“No CS degree required, just good questions and the nerve to hit run.”</p>
-      </article>
-
-      <article class="cell span-1x1 tile tile--stat">
-        <p class="stat-number">1<span class="stat-unit">shipped</span></p>
-        <p class="stat-sub">3 more brewing</p>
-      </article>
-
-      <article id="contact" class="cell span-2x1 tile tile--contact">
-        <h2 class="tile-heading">Let’s connect</h2>
-        <div class="social-links">
-          <a href="#" class="social-pill">GitHub</a>
-          <a href="#" class="social-pill">Twitter / X</a>
-          <a href="#" class="social-pill">Email</a>
-        </div>
-      </article>
-
+  <section class="off-screen">
+    <div class="section-inner">
+      <div class="stat-block">
+        <p class="stat-number">1</p>
+        <p class="stat-label">Shipped, 3 more brewing</p>
+      </div>
+      <p class="off-screen-quote"><strong>Off-screen:</strong> when I’m not making AI do weird and wonderful things, I’m deep in a book, deep in a game, getting bossed around by my cats, or working on my tan at the beach.</p>
     </div>
   </section>
 </main>
 
-<footer class="foot-marquee" aria-label="Footer">
-  <div class="foot-marquee__track" aria-hidden="true">
-    <span>SAMANTHA MAKES STUFF · MADE WITH GLITTER AND CHAOS · SAMANTHA MAKES STUFF · MADE WITH GLITTER AND CHAOS ·</span>
-    <span>SAMANTHA MAKES STUFF · MADE WITH GLITTER AND CHAOS · SAMANTHA MAKES STUFF · MADE WITH GLITTER AND CHAOS ·</span>
+<section id="connect" class="connect">
+  <div class="connect-confetti" aria-hidden="true">
+    <span class="motif motif-triangle" style="--motif-color: var(--color-accent);"></span>
+    <span class="motif motif-squiggle" style="--motif-color: var(--color-secondary);"></span>
+    <span class="motif motif-circle" style="--motif-color: var(--color-primary);"></span>
+    <span class="motif motif-zigzag" style="--motif-color: var(--color-accent);"></span>
   </div>
-  <p class="visually-hidden">Samantha Makes Stuff. Made with glitter and chaos.</p>
+  <div class="section-inner">
+    <h2 class="connect-heading">Let’s connect</h2>
+    <p class="connect-sub">Find Samantha around the internet.</p>
+    <div class="connect-links">
+      <a href="#" class="btn">GitHub</a>
+      <a href="#" class="btn">Twitter / X</a>
+      <a href="#" class="btn">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-motif-strip" aria-hidden="true">
+    <span class="motif motif-triangle" style="position: static; width: 0.9rem; height: 0.8rem; --motif-color: var(--color-primary);"></span>
+    <span class="motif motif-circle motif-circle--sm" style="--motif-color: var(--color-secondary);"></span>
+    <span class="motif motif-triangle" style="position: static; width: 0.9rem; height: 0.8rem; --motif-color: var(--color-accent);"></span>
+    <span class="motif motif-circle motif-circle--sm" style="--motif-color: var(--color-primary);"></span>
+  </div>
+  <div class="section-inner">
+    <span class="wordmark">Samantha <span>Makes Stuff</span></span>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+    <p class="copyright">© 2026 Samantha Makes Stuff</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>

@@ -1,81 +1,76 @@
-/* Hallmark tokens · Samantha Makes Stuff · theme: custom (Memphis / disco-glam) */
+/* Design tokens · Samantha Makes Stuff · Memphis Design Language
+ * Palette, motif geometry, and type sourced from the Canva logo draft.
+ */
 :root {
-  /* ---------- Colour — paper (light, warm-pink tinted) ---------- */
-  --color-paper:      oklch(97% 0.015 350);
-  --color-paper-2:    oklch(94% 0.020 350);
-  --color-paper-3:    oklch(90% 0.024 350);
+  /* ---------- Color — locked structure: 1 background, 1 ink, 3 saturated accents, 1 secondary neutral ---------- */
+  --color-background: oklch(97% 0.020 80);   /* cream paper */
+  --color-surface:    oklch(94% 0.025 80);   /* card surface, one step down */
+  --color-ink:         oklch(15% 0.020 55);   /* near-black, warm-tinted */
+  --color-ink-2:        oklch(34% 0.020 55);   /* secondary text */
+  --color-rule:         oklch(85% 0.020 80);   /* quiet divider */
 
-  /* ---------- Colour — ink ---------- */
-  --color-ink:        oklch(14% 0.035 300);
-  --color-ink-2:      oklch(32% 0.030 300);
-  --color-rule:       oklch(80% 0.020 350);
-  --color-rule-2:     oklch(70% 0.025 350);
-  --color-muted:      oklch(48% 0.030 300);
-  --color-neutral:    oklch(40% 0.030 300);
+  --color-primary:      oklch(62% 0.220 5);     /* hot pink — the loudest accent */
+  --color-primary-ink:  var(--color-ink);        /* safe default for small/body-sized text on pink fill */
+  --color-primary-ink-large: var(--color-background); /* only for large/display-sized text on pink fill (>=18.66px bold) */
+  --color-secondary:    oklch(80% 0.115 185);   /* turquoise */
+  --color-secondary-ink: var(--color-ink);
+  --color-accent:       oklch(80% 0.150 85);    /* mustard/gold — flat, no glitter */
+  --color-accent-ink:   var(--color-ink);
+  --color-neutral:      oklch(90% 0.030 350);   /* blush — optional secondary neutral */
 
-  /* ---------- Colour — hero surface (dark ink block, not a gradient) ---------- */
-  --color-hero:       oklch(11% 0.030 300);
-  --color-hero-2:     oklch(18% 0.035 300);
-
-  /* ---------- Colour — functional accent (hot pink) ---------- */
-  --color-accent:      oklch(58% 0.20 350);
-  --color-accent-ink:  var(--color-ink);
-  --color-focus:       oklch(62% 0.22 350);
-
-  /* ---------- Colour — decorative brand palette (Memphis confetti, disco ball) ---------- */
-  --color-brand-pink:   var(--color-accent);
-  --color-brand-violet: oklch(50% 0.22 295);
-  --color-brand-gold:   oklch(85% 0.15 95);
-  --color-brand-cyan:   oklch(78% 0.13 195);
-
-  /* ---------- Colour — disco-sphere facet shading (neutral, tinted toward ink hue) ---------- */
-  --color-disco-facet-a: oklch(88% 0.010 300 / 0.9);
-  --color-disco-facet-b: oklch(60% 0.010 300 / 0.9);
-  --color-disco-sheen:   oklch(96% 0.010 300);
-  --color-disco-shadow:  oklch(55% 0.020 300);
+  --color-focus:        oklch(58% 0.230 5);
 
   /* ---------- Type ---------- */
-  --font-display: "Modak", "Segoe UI", sans-serif;
-  --font-body:    "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-outlier: "Libre Bodoni", Georgia, serif;
+  --font-display: "Megrim", ui-sans-serif, sans-serif;
+  --font-script:  "Caveat", cursive;
+  --font-body:    "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
-  --text-xs:      0.75rem;
-  --text-sm:      0.875rem;
-  --text-base:    1rem;
-  --text-md:      1.25rem;
-  --text-lg:      1.5625rem;
-  --text-xl:      1.9531rem;
-  --text-2xl:     2.4414rem;
-  --text-3xl:     3.0518rem;
-  --text-display:   clamp(2.75rem, 5vw + 1rem, 5.25rem);
-  --text-display-s: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-md:   1.25rem;
+  --text-lg:   1.5625rem;
+  --text-xl:   1.9531rem;
+  --text-2xl:  2.4414rem;
+  --text-3xl:  3.0518rem;
+  --text-display:   clamp(3.5rem, 9vw, 8rem);
+  --text-display-s: clamp(2.25rem, 6vw, 4.5rem);
 
-  /* ---------- Space (4pt scale) ---------- */
-  --space-3xs: 0.125rem;
-  --space-2xs: 0.25rem;
-  --space-xs:  0.5rem;
-  --space-sm:  0.75rem;
-  --space-md:  1rem;
-  --space-lg:  1.5rem;
-  --space-xl:  2.5rem;
-  --space-2xl: 4rem;
-  --space-3xl: 6rem;
-  --space-4xl: 9rem;
-
-  /* ---------- Shape — sharp, Memphis/brutal-slab vocabulary ---------- */
-  --radius-card:  4px;
+  /* ---------- Borders / shape (Memphis: thick borders, hard offset shadows) ---------- */
+  --border-width:    3px;
+  --border-width-lg: 4px;
+  --radius-small: 4px;
+  --radius-large: 20px;
   --radius-pill:  999px;
-  --radius-input: 2px;
-  --border-width: 2px;
-  --border-width-lg: 3px;
+  --shadow-offset:    8px;
+  --shadow-offset-sm: 4px;
+
+  /* ---------- Rotation (deliberate imperfection, kept consistent) ---------- */
+  --rotate-subtle:      -2deg;
+  --rotate-subtle-pos:   2deg;
+  --rotate-strong:      -6deg;
+  --rotate-strong-pos:   6deg;
+
+  /* ---------- Spacing (4pt scale) ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
 
   /* ---------- Motion ---------- */
   --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-micro:   100ms;
-  --dur-short:   180ms;
-  --dur-long:    320ms;
+  --ease-press:  cubic-bezier(0.34, 1.56, 0.64, 1); /* physical button-press only, per design.md §8/§9 */
+  --dur-micro: 100ms;
+  --dur-short: 180ms;
+  --dur-long:  320ms;
 
   /* ---------- Z-index ---------- */
   --z-base:     1;
@@ -84,7 +79,6 @@
   --z-sticky:   200;
   --z-modal:    400;
   --z-toast:    500;
-  --z-tooltip:  600;
 
   color-scheme: light;
 }

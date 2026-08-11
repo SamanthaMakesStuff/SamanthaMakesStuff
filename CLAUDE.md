@@ -10,18 +10,21 @@ The personal hub site for "Samantha Makes Stuff" — a single-page site that int
 
 Plain static site, no build step, no framework, no package.json:
 
-- `index.html` — the entire page (nav, hero, about, projects, contact, footer sections)
-- `style.css` — all styling, organized into clearly commented sections (design tokens, sparkle field, nav, hero/disco-ball, sections, about, projects, contact, footer, reduced-motion). Design tokens (colors, gradients, fonts) are defined once as CSS custom properties in `:root` at the top — change the palette/typography there rather than hardcoding values elsewhere.
-- `script.js` — one small effect (click-triggered sparkle emoji burst)
-- `fonts/` — self-hosted `.woff2` files for the two display fonts (Modak, Libre Bodoni), loaded via `@font-face`. Body font (Poppins) is loaded from Google Fonts in `index.html`.
+- `index.html` — the entire page (header, hero, about, projects, off-screen, connect, footer sections)
+- `tokens.css` — design tokens as CSS custom properties (colors, type, spacing, borders/shadows, rotation, motion) — change the palette/typography here, not inline in `style.css`
+- `style.css` — all component and layout styling, including the shared `.motif-*` shape system (triangle/circle/zigzag/squiggle/arc) reused across hero, cards, and footer
+- `script.js` — mobile nav toggle + one small effect (click-triggered Memphis-motif confetti burst, reusing the same shape system)
+- `Memphis_Design.md` — the governing design system (locked structural/graphic rules vs. customizable per-project parameters). Read this before making any visual change; see `PRODUCT.md` § Brand Commitments for how its customizable parameters (palette, motif set, type) were resolved for this project.
+- No local font files — Megrim, Caveat, and Plus Jakarta Sans are all loaded from Google Fonts in `index.html`.
 
 There is no local dev server, test suite, linter, or build/deploy command in this repo — it's deployed to Vercel directly from static files. To preview locally, just open `index.html` in a browser or serve the directory with any static file server.
 
 ## Content rules
 
-- Projects in the `.project-card` grid are either real with a working live link, or honestly marked `data-status="coming-soon"` with placeholder copy — never invent a project, description, or capability behind a "coming soon" card.
+- Projects in the `.card` grid are either real with a working live link, or honestly marked `data-status="coming-soon"` with placeholder copy — never invent a project, description, or capability behind a "coming soon" card.
 - Don't fabricate testimonials, press, or third-party proof.
 - Bio/personal details (reading, gaming, cats, the beach, AI/vibe-coding as curiosity-driven exploration) are confirmed real and already reflected in the About section copy.
+- The Memphis motif set is locked to exactly 5 shapes (triangle, circle/dot, zigzag, squiggle, arc, per `Memphis_Design.md` § 0.2) — don't introduce a new decorative shape without updating that section and `PRODUCT.md` together.
 
 ## `.impeccable/`
 

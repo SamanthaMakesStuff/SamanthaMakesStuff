@@ -16,7 +16,7 @@ A personal hub for Samantha's AI / "vibe coding" experiments: one place that int
 
 ## Positioning
 
-A personally-authored hub for one person's real AI/vibe-coding experiments, wrapped in a distinct, bright-pink disco-glam identity that is itself part of the pitch — not a generic templated developer portfolio a neighboring site could swap in unchanged.
+A personally-authored hub for one person's real AI/vibe-coding experiments, wrapped in a distinct Memphis-design identity (bold geometric motifs, offset shadows, a compact saturated palette) that is itself part of the pitch — not a generic templated developer portfolio a neighboring site could swap in unchanged.
 
 ## Operating Context
 
@@ -32,8 +32,11 @@ Static site (no backend, no CMS) hosted on GitHub, deployed as plain HTML/CSS/JS
 ## Brand Commitments
 
 - Name: "Samantha Makes Stuff."
-- Bright, bold, hot-pink (#FF0084) and violet identity with a disco-ball motif (animated spinning mirror-ball hero, glitter sparkle glints, colored light beams) — explicitly requested and confirmed binding.
-- Typography: Modak (bold, bubbly, playful) for the hero title and nav logo; Libre Bodoni (elegant serif) for section subheadings, chosen deliberately as a sophistication counterweight to Modak; Poppins for body copy.
+- **Memphis Design Language** — see `Memphis_Design.md` at the project root for the full governing rules (locked structural/graphic rules vs. customizable per-project parameters). Sourced from Samantha's own Canva logo draft, explicitly requested and confirmed binding:
+  - Palette (locked structure: 1 background, 1 ink, 3 saturated accents, 1 secondary neutral): cream background, near-black ink, hot pink (loudest accent), turquoise, mustard/gold (flat, no glitter/metallic treatment).
+  - Motif set (locked to exactly these 5, reused everywhere — hero, cards, footer, click effect): triangle, circle/dot, zigzag, squiggle, arc.
+  - Typography: Megrim (free, Google Fonts) for the display/logo-lockup treatment (mirrors the outlined wordmark in the Canva logo); Caveat (free, Google Fonts) as a script accent for the "Stuff" flourish — standing in for the Canva-proprietary "Pinkerton," which isn't confirmed licensed for web use; Plus Jakarta Sans for body copy — standing in for "Gorden," also unconfirmed. Revisit if Samantha secures a web license for the original faces.
+  - Component treatment: thick ink borders + hard offset shadows on cards/buttons (no soft/diffuse shadows), physical press interaction, deliberate off-grid rotation on selected elements — never on navigation or body copy.
 - Voice: confident and witty, first-person, playful ("professionally curious, allergic to boring").
 - Confirmed personal details woven into bio copy: reading, gaming, cats, the beach, and AI/vibe-coding as curiosity-driven exploration.
 

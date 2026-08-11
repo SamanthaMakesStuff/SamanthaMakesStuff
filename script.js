@@ -1,26 +1,26 @@
 // Mobile nav toggle
-const navSlab = document.getElementById("navSlab");
+const siteHeader = document.getElementById("siteHeader");
 const navToggle = document.getElementById("navToggle");
 
 navToggle.addEventListener("click", () => {
-  const isOpen = navSlab.classList.toggle("is-open");
+  const isOpen = siteHeader.classList.toggle("is-open");
   navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-document.getElementById("navLinks").addEventListener("click", (event) => {
+document.getElementById("siteNav").addEventListener("click", (event) => {
   if (event.target.tagName === "A") {
-    navSlab.classList.remove("is-open");
+    siteHeader.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
   }
 });
 
-// Click-triggered Memphis confetti burst — hand-built CSS shapes, not emoji.
-const shapeClasses = ["shape-circle", "shape-triangle", "shape-zigzag"];
-const brandColors = [
-  "var(--color-brand-pink)",
-  "var(--color-brand-violet)",
-  "var(--color-brand-gold)",
-  "var(--color-brand-cyan)",
+// Click-triggered Memphis confetti — reuses the site's locked 5-motif set.
+const shapeClasses = ["motif-triangle", "motif-circle", "motif-zigzag", "motif-squiggle", "motif-arc"];
+const motifColors = [
+  "var(--color-primary)",
+  "var(--color-secondary)",
+  "var(--color-accent)",
+  "var(--color-ink)",
 ];
 
 document.addEventListener("click", (event) => {
@@ -28,16 +28,12 @@ document.addEventListener("click", (event) => {
 
   const particle = document.createElement("span");
   const shape = shapeClasses[Math.floor(Math.random() * shapeClasses.length)];
-  particle.className = `shape ${shape} confetti-particle`;
+  particle.className = `motif ${shape} confetti-particle`;
   particle.style.left = `${event.clientX}px`;
   particle.style.top = `${event.clientY}px`;
-
-  const color = brandColors[Math.floor(Math.random() * brandColors.length)];
-  if (shape === "shape-triangle") {
-    particle.style.borderBottomColor = color;
-  } else {
-    particle.style.background = color;
-  }
+  particle.style.setProperty("--motif-color", motifColors[Math.floor(Math.random() * motifColors.length)]);
+  particle.style.width = "1.4rem";
+  particle.style.height = "1.4rem";
 
   document.body.appendChild(particle);
   particle.addEventListener("animationend", () => particle.remove());
