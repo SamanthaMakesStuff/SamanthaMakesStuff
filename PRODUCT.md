@@ -8,49 +8,49 @@ web
 
 ## Users
 
-General public with no prior context on Samantha — people arriving via social media, GitHub, or word of mouth. They land with zero background on who she is or what she's built.
+General public with no prior context on Samantha — people arriving via social media or word of mouth. They land with zero background on who she is or what she's made.
 
 ## Product Purpose
 
-A personal hub for Samantha's AI / "vibe coding" experiments: one place that introduces her (bio, personality) and links out to the individual projects she builds. Success means both things land equally — visitors get a sense of who she is *and* click through to try what she's made. Neither is subordinate to the other.
+A personal hub introducing Samantha and the small, real things she makes — Notion systems, mini apps, half-ideas that grow legs. Everything that survives lands on this page.
 
 ## Positioning
 
-A personally-authored hub for one person's real AI/vibe-coding experiments, wrapped in a distinct Memphis-design identity (bold geometric motifs, offset shadows, a compact saturated palette) that is itself part of the pitch — not a generic templated developer portfolio a neighboring site could swap in unchanged.
+A personally-authored maker's page, not a generic portfolio template. The specific product lineup (see Evidence below) is still being finalized — several are honest placeholders — but the voice and design are the pitch, same as before.
 
 ## Operating Context
 
-Static site (no backend, no CMS) hosted on GitHub, deployed as plain HTML/CSS/JS. Individual projects are separate applications hosted elsewhere (e.g. Vercel) and linked from the project grid; the site itself never runs project logic. New projects get added by hand as Samantha builds them.
+Single-file site hosted on GitHub, deployed to Vercel. No backend, no CMS.
 
 ## Capabilities and Constraints
 
-- Single static page (index.html/style.css/script.js), no build step, no framework.
-- New projects are added by manually editing the project-grid markup — no CMS or data-driven listing.
-- No custom domain configured yet (serving from the default GitHub/host URL).
+- `index.html` is a pre-bundled single file (produced by an external tool, not hand-authored here) — see `CLAUDE.md` § Architecture before touching it.
+- No custom domain configured yet.
 - No analytics currently in place.
 
 ## Brand Commitments
 
+**As of the current `index.html`** (replaced wholesale from an externally-supplied bundle — see git history for the prior Memphis-design iteration if it's ever needed for reference):
+
 - Name: "Samantha Makes Stuff."
-- **Memphis Design Language** — see `Memphis_Design.md` at the project root for the full governing rules (locked structural/graphic rules vs. customizable per-project parameters). Sourced from Samantha's own Canva logo draft, explicitly requested and confirmed binding:
-  - Palette (locked structure: 1 background, 1 ink, 3 saturated accents, 1 secondary neutral): cream background, near-black ink, hot pink (loudest accent), turquoise, mustard/gold (flat, no glitter/metallic treatment).
-  - Motif set (locked to exactly these 5, reused everywhere — hero, cards, footer, click effect): triangle, circle/dot, zigzag, squiggle, arc.
-  - Typography: Anton (free, Google Fonts) — heavy condensed grotesque — for the display/logo-lockup treatment, used transparent-with-outline for the "Samantha" wordmark per explicit direction (revised from an earlier Megrim pass, which read too thin/quiet for the brand); Caveat (free, Google Fonts) as a script accent for the "Stuff" flourish — standing in for the Canva-proprietary "Pinkerton," which isn't confirmed licensed for web use; Plus Jakarta Sans for body copy — standing in for "Gorden," also unconfirmed. Revisit if Samantha secures a web license for the original faces.
-  - Background is a near-white warm cream (`#FFFDF7`) — deliberately quiet so the saturated accents and dense motif system read as bold rather than competing with a heavier tinted paper.
-  - Component treatment: thick ink borders + hard offset shadows on cards/buttons (no soft/diffuse shadows), physical press interaction, deliberate off-grid rotation on selected elements — never on navigation or body copy.
+- Palette: pink `#FF2E93`, ink `#1A1A2E`, teal `#00C2A8`, yellow `#FFD400`, cream `#FFFDF7`, tinted paper `#FFF7FB`, muted text `#6E6A78`.
+- Fonts (all Google Fonts): Fredoka (headlines), Anton (wordmark/shout lines), Space Grotesk (body), Caveat (script accent), Bungee (chips/marquee).
 - Voice: confident and witty, first-person, playful ("professionally curious, allergic to boring").
-- Confirmed personal details woven into bio copy: reading, gaming, cats, the beach, and AI/vibe-coding as curiosity-driven exploration.
+
+This doc hasn't been fully reconciled against the new page's actual content — treat the live `index.html` as the source of truth for current specifics, and update this section properly next time it's touched with intent.
 
 ## Evidence on Hand
 
-- Real, confirmed bio copy already live in the About section of index.html.
-- One real, live project: "Silly Tavern Companion" (github.com/SamanthaMakesStuff/SillyTavern-Character-Lore-Extractor) — a Gemini-powered tool that extracts SillyTavern character cards and lorebooks from fanfiction text. Deployed at https://silly-tavern-companion.vercel.app/ and linked from the project grid.
-- Three project-grid slots remain honest "coming soon" placeholders (Project Two/Three/Four) — no real project exists behind them yet; future work must not invent details for these.
+- A product called **"Sparks"** — appears to be a Notion template — is featured, with price/description/Gumroad link left as placeholders.
+- A **book-recommendation app** is referenced (working name, one-liner, and progress all placeholders).
+- A **next Notion template** slot is placeholder-only.
+- Contact/social links (email, Instagram, TikTok, Gumroad profile) are placeholders.
+- The About section has a photo placeholder.
+- A `brand-kit.html` page is linked from the footer but does not exist in this repo — was never delivered. Don't fabricate one.
 - No testimonials, press, or third-party proof exist and none should be fabricated.
 
 ## Product Principles
 
-1. Personality and portfolio are inseparable — the bright/pink/disco/confident-witty identity is the pitch, not decoration applied to a generic template.
-2. The site is a hub, not the product — its job is to earn attention and trust quickly, then hand off cleanly to the real experiments living elsewhere.
-3. Every project card is either real with a working live link, or honestly marked "coming soon" — never an invented project, description, or capability.
-4. Stays a lightweight static site — no build step or backend dependency for the shell itself, so adding a new experiment stays cheap.
+1. Every placeholder (`[ ... ]` dashed boxes in the page) is an honest, visible gap — fill them only with facts Samantha supplies, never invented specifics.
+2. The site is a hub, not the product — it should earn attention quickly and hand off cleanly to the real things it links to.
+3. `index.html` is a delivered design artifact — don't rewrite, reformat, or "modernise" it. Edit content in place inside the bundle; see `CLAUDE.md`.
