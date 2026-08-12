@@ -41,7 +41,7 @@ This doc hasn't been fully reconciled against the new page's actual content — 
 
 ## Evidence on Hand
 
-- A product called **"Sparks"** — appears to be a Notion template — is featured, with price/description/Gumroad link left as placeholders.
+- A product called **"Spark"** — a Notion template that colour-codes tasks by energy, not just urgency, for scattered/busy/easily-overwhelmed minds — $15, live on Gumroad (https://samanthamakesstuff.gumroad.com/l/notion-spark).
 - A **book-recommendation app** is referenced (working name, one-liner, and progress all placeholders).
 - A **next Notion template** slot is placeholder-only.
 - Contact/social links (email, Instagram, TikTok, Gumroad profile) are placeholders.
