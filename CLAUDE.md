@@ -16,13 +16,17 @@ There is no dev server, test suite, linter, or build command in this repo. To pr
 
 ## Known gaps
 
-- The footer links to `brand-kit.html`, which does not exist in this repo — a companion page that was never delivered. Leave as-is until Samantha provides it; do not fabricate a replacement.
-- The page contains several deliberate, visible placeholders (pricing/links for "Sparks", a book-recommendation app's name and one-liner, a Notion template name, social/contact links, an About-section photo) — these are honest gaps Samantha still needs to fill in, not bugs. Don't invent content for them.
+- The page contains several deliberate, visible placeholders (a book-recommendation app's name and one-liner, a Notion template name, social/contact links, an About-section photo) — these are honest gaps Samantha still needs to fill in, not bugs. Don't invent content for them.
+- The footer's `brand-kit.html` link has been removed (it pointed to a companion page that was never delivered). If Samantha provides that page later, it can be re-added.
 
 ## Content rules
 
 - Don't fabricate testimonials, press, third-party proof, or details behind any placeholder.
 - Real bio/project details already in the page are confirmed — don't alter their substance without being told the facts changed.
+
+## Design rules for any Vercel/`index.html` change
+
+Before finalizing any visual or content change to this site, check it against the `hallmark-antipatterns` skill (no gradients, no invented icon motifs, etc.) and confirm it fits the `samantha-memphis` design language (locked palette/motif/border/shadow rules). This applies to every change going forward, not just new sections.
 
 ## `.impeccable/`
 
